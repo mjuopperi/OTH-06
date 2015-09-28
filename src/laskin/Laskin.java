@@ -17,15 +17,16 @@ public class Laskin {
     }
 
     public void vahenna(int n) {
-        tulos = tulos - 1;     // Bugi
+        tulos = tulos - n;
     }
 
     public void kerro(int n) {
-        // Ei vielä toteutettu
+        tulos = tulos * n;
     }
 
     public void jaa(int n) {
-        tulos = tulos / n;
+        if (n == 0) throw new ArithmeticException("Division by zero");
+        else tulos = tulos / n;
     }
 
     public void nelio(int n) {
@@ -33,7 +34,8 @@ public class Laskin {
     }
 
     public void neliojuuri(int n) {
-        for (;;) ;           // Bugi
+        if (n < 0) throw new ArithmeticException("Square root of negative number");
+        else tulos = Double.valueOf(Math.sqrt(n)).intValue();
     }
     
     public void virtaON() {

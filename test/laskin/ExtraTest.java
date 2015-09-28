@@ -34,6 +34,18 @@ public class ExtraTest extends AbstractParent {
     @Test(timeout = 1000)
     public void testNeliojuuri2() {
         laskin.neliojuuri(2);
+        assertEquals("neliojuuri(2)", 1, laskin.annaTulos());
+    }
+
+    @Test(timeout = 1000)
+    public void testNeliojuuri4() {
+        laskin.neliojuuri(4);
+        assertEquals("neliojuuri(4)", 2, laskin.annaTulos());
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void testNeliojuuriNegatiivinen() {
+        laskin.neliojuuri(-1);
     }
 
     @Test

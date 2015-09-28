@@ -36,7 +36,7 @@ public class LaskinTest {
     public void testJaa() {
         laskin.lisaa(8);
         laskin.jaa(2);
-        assert laskin.annaTulos() == 5;
+        assert laskin.annaTulos() == 4;
     }
 
     // Nollalla jaon pitäisi heittää poikkeus
@@ -47,7 +47,6 @@ public class LaskinTest {
 
     // Tätä testiä ei haluta vielä ajaa
     @Test
-    @Ignore("Metodi multiply() on vielä toteuttamatta.")
     public void testKerro() {
         laskin.lisaa(10);
         laskin.kerro(10);
