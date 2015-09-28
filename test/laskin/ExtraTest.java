@@ -34,13 +34,13 @@ public class ExtraTest extends AbstractParent {
     @Test(timeout = 1000)
     public void testNeliojuuri2() {
         laskin.neliojuuri(2);
-        assertEquals("neliojuuri(2)", 1, laskin.annaTulos());
+        assertEquals("neliojuuri(2)", 1.4142135623, laskin.annaTulos(), AbstractParent.DELTA);
     }
 
     @Test(timeout = 1000)
     public void testNeliojuuri4() {
         laskin.neliojuuri(4);
-        assertEquals("neliojuuri(4)", 2, laskin.annaTulos());
+        assertEquals("neliojuuri(4)", 2, laskin.annaTulos(), AbstractParent.DELTA);
     }
 
     @Test(expected = ArithmeticException.class)
@@ -51,19 +51,19 @@ public class ExtraTest extends AbstractParent {
     @Test
     public void testNelio2() {
         laskin.nelio(2);
-        assertEquals("nelio(2) ", 4, laskin.annaTulos());
+        assertEquals("nelio(2) ", 4, laskin.annaTulos(), AbstractParent.DELTA);
     }
 
     @Test
     public void testNelio4() {
         laskin.nelio(4);
-        assertEquals("nelio(4) ",16, laskin.annaTulos());
+        assertEquals("nelio(4) ",16, laskin.annaTulos(), AbstractParent.DELTA);
     }
 
     @Test
     public void testNelio5() {
         laskin.nelio(5);
-        assertEquals("nelio(5) ", 25, laskin.annaTulos());
+        assertEquals("nelio(5) ", 25, laskin.annaTulos(), AbstractParent.DELTA);
     }
 
 }

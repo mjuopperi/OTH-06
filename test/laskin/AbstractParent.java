@@ -10,6 +10,8 @@ import org.junit.BeforeClass;
  */
 public abstract class AbstractParent {
 
+    public static final double DELTA = 0.001;
+
     @BeforeClass
     public static void startTestSystem() {
         System.out.println("@BeforeClass TESTAAMINEN ALKAA.");

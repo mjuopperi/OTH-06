@@ -22,14 +22,14 @@ public class LaskinTest {
     public void testLisaa() {
         laskin.lisaa(1);
         laskin.lisaa(1);
-        assertEquals("1 + 1 ", 2, laskin.annaTulos());
+        assertEquals("1 + 1 ", 2, laskin.annaTulos(), AbstractParent.DELTA);
     }
 
     @Test
     public void testVahenna() {
         laskin.lisaa(10);
         laskin.vahenna(2);
-        assertEquals("10 - 2 ", laskin.annaTulos(), 8);
+        assertEquals("10 - 2 ", laskin.annaTulos(), 8, AbstractParent.DELTA);
     }
 
     @Test
@@ -50,6 +50,6 @@ public class LaskinTest {
     public void testKerro() {
         laskin.lisaa(10);
         laskin.kerro(10);
-        assertEquals("10 * 10 ", 100, laskin.annaTulos());
+        assertEquals("10 * 10 ", 100, laskin.annaTulos(), AbstractParent.DELTA);
     }
 }
